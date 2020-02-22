@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: security-tutorial
+    devtools:
+        restart:
+            enable: true
+            log-condition-evaluation-delta: false
+        add-properties: true
+    thymeleaf:
+        prefix: classpath:/templates/
+
+logging:
+    level:
+        org.springframework.boot.autoconfigure.logging: INFO
+        org.springframework.data.mongodb.core.MongoTemplate: DEBUG

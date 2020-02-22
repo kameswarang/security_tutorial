@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Registration for new users">
+        <meta name="author" content="Kameswaran Ganesh">
+        
+        <title>Security Tutorial - Home</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="/webjars/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+        
+        <!-- Custom css -->
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="text-center">Home</h2>
+            <div class="row">
+                <div class="col">
+                    <span class="text-center" th:text="|Logged in as, ${user.getName()}|"></span>
+                </div>
+                <div class="col">
+                    <form method="POST" th:action="@{/logout}">
+                        <button type="submit" class="btn btn-secondary">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap js -->
+        <script src="webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery -->
+        <script src="webjars/jquery/3.4.1/jquery.slim.min.js"></script>
+    </body>
+</html>
