@@ -17,6 +17,7 @@
     <body>
         <div class="container w-25 h-50 p-1 mx-auto mt-3 border border-dark rounded">
             <h3 class="text-center">Login for existing users</h3>
+            <hr>
             <form method="POST" th:action="@{/login}" class="needs-validation" novalidate>
                 <div class="form-group">
                     <div class="row w-fit-content mt-2 mx-auto" th:if="${param.registrationSuccess}">
@@ -44,6 +45,7 @@
                     </div>
                 </div>
             </form>
+            <hr>
             <div class="row w-fit-content mt-1 mx-auto">
                 <span class="text-center"><h5>or</h5></span>
             </div>

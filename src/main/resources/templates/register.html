@@ -17,6 +17,7 @@
     <body>
         <div class="container w-50 h-50 p-1 mx-auto mt-3 border border-dark rounded">
             <h3 class="text-center">Register as new user</h3>
+            <hr>
             <form method="POST" th:object=${user} th:action="@{/register}">
                 <div class="form-group">
                     <div class="row mt-2 mx-auto">
@@ -64,6 +65,7 @@
                     </div>
                 </div>
             </form>
+            <hr>
             <div class="row w-fit-content mt-1 mx-auto">
                 <span class="text-center"><h5>or</h5></span>
             </div>
@@ -72,8 +74,8 @@
             </div>        
         </div>
         <!-- Bootstrap js -->
-        <script src="webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
         <!-- jQuery -->
-        <script src="webjars/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="/webjars/jquery/3.4.1/jquery.slim.min.js"></script>
     </body>
 </html>
