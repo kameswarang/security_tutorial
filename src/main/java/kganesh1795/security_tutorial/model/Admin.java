@@ -16,21 +16,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
+//@Component
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
-@Document(collection = "user")
-public class User implements UserDetails {
-	
-	public User(String u, String p, String f, String l) {
-		this.username = u;
-		this.password = p;
-		this.firstName = f;
-		this.lastName = l;
-	}
-	
+@Document(collection = "admin")
+public class Admin implements UserDetails {
 	@Id
 	@NonNull
 	@NotBlank(message = "Provide a username atleast 5 characters long")
@@ -38,28 +30,17 @@ public class User implements UserDetails {
 	private String username;
 
 	@NonNull
-	@Setter
 	@NotBlank(message = "Provide a password atleast 5 characters long")
 	@Size(min = 5, message = "Must be atleast five characters long")
 	private String password;
 
-	private Collection<GrantedAuthority> authorities;
-
-	@NotBlank(message = "Provide a name atleast 2 characters long")
-	@Size(min = 2, message = "Must be atleast two characters long")
-	private String firstName;
-
-	@NotBlank(message = "Provide a name atleast 2 characters long")
-	@Size(min = 2, message = "Must be atleast two characters long")
-	private String lastName;
-
 	public String getName() {
-		return this.firstName + " " + this.lastName;
+		return "Administrator";
 	}
-
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+		return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
 	}
 
 	@Override

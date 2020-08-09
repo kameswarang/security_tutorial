@@ -22,7 +22,6 @@
 		<dependency>
 		    <groupId>javax.annotation</groupId>
 		    <artifactId>javax.annotation-api</artifactId>
-		    <version>1.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -55,7 +54,6 @@
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
-		    <version>1.18.10</version>
 		    <scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -85,11 +83,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <environmentVariables>
-                        <MONGODB_URI>mongodb://localhost/security_tutorial</MONGODB_URI>
-                    </environmentVariables>
-                </configuration>
         	</plugin>
 		    <plugin>
 		      <groupId>org.projectlombok</groupId>
