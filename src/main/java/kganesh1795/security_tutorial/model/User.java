@@ -23,7 +23,9 @@ import lombok.Setter;
 @RequiredArgsConstructor
 @Document(collection = "user")
 public class User implements UserDetails {
-	
+
+	private static final long serialVersionUID = 3307834320580557527L;
+
 	public User(String u, String p, String f, String l) {
 		this.username = u;
 		this.password = p;
@@ -42,8 +44,6 @@ public class User implements UserDetails {
 	@NotBlank(message = "Provide a password atleast 5 characters long")
 	@Size(min = 5, message = "Must be atleast five characters long")
 	private String password;
-
-	private Collection<GrantedAuthority> authorities;
 
 	@NotBlank(message = "Provide a name atleast 2 characters long")
 	@Size(min = 2, message = "Must be atleast two characters long")

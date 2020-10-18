@@ -23,6 +23,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Document(collection = "admin")
 public class Admin implements UserDetails {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1407393377080476258L;
+
 	@Id
 	@NonNull
 	@NotBlank(message = "Provide a username atleast 5 characters long")
